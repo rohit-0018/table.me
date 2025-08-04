@@ -5,9 +5,6 @@ import { TableData } from '../table/types/tableData.type';
   providedIn: 'root',
 })
 export class SharedDataService {
-   constructor() {
-    console.log("Table data", this.data);
-   }
     private data!: TableData[];
 
    async init() {

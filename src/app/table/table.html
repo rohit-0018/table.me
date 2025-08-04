@@ -9,9 +9,9 @@
     <tbody>
         
       <tr *ngFor="let item of data"  class="cursor-pointer hover:bg-gray-100">
-        <td *ngFor="let header of headers" class="border p-2"(click)="$event.stopPropagation()"  (blur)="onEdit(item['id'], header.display, $event)">
+        <td *ngFor="let header of headers" class="border p-2"(click)="$event.stopPropagation()">
           <span *ngIf="header.isLink; else noLink" (click)="goToDetails(item)" class="link">{{ item[header.key]}}</span>
-          <ng-template #noLink> <div contenteditable >{{ item[header.key]}}</div> </ng-template>
+          <ng-template #noLink> <div contenteditable  (blur)="onEdit(item['id'], header.key, $event)">{{ item[header.key]}}</div> </ng-template>
         </td>
       </tr>
     </tbody>

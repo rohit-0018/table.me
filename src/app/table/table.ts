@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { MatTable } from '@angular/material/table';
 import { SharedDataService } from '../service/shared-data.service';
 import { Column } from './types/column.type';
 import { TableData } from './types/tableData.type';
@@ -12,7 +11,7 @@ const getHeaders = (data: TableData[]): Column[] =>
         id: String(idx),
         key,
         display: key.toUpperCase(),
-        isLink: idx ==0,
+        isLink: idx ==0, //Making fist col as clickable
       }))
     : [];
 

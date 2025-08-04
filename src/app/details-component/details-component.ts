@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { SharedDataService } from '../service/shared-data.service';
-
+import { TableData } from '../table/types/tableData.type';
+type Detail = TableData;
 @Component({
   selector: 'app-details-component',
   imports: [],
@@ -9,7 +10,7 @@ import { SharedDataService } from '../service/shared-data.service';
   styleUrl: './details-component.css'
 })
 export class DetailsComponent {
-  item: any;
+  item!: Detail;
 
   constructor(private route: ActivatedRoute, private tableService: SharedDataService) {}
 

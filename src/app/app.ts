@@ -1,13 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet, Routes } from '@angular/router';
-import { Table } from "./table/table";
-import { DetailsComponent } from './details-component/details-component';
+import { Table } from './table/table';
 import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, Table, CommonModule],
+  imports: [RouterOutlet, CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App {
   protected readonly title = signal('table.me');
