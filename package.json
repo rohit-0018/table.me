@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "deploy": "ng build --base-href=https://rohit-0018.github.io/table.me/ && npx angular-cli-ghpages --dir=dist/table.me/browser"
   },
   "prettier": {
     "overrides": [
